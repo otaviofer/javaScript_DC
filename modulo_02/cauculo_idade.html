@@ -1,0 +1,21 @@
+<html>
+    <meta charset="UTF-8">
+    <body>
+        <script>
+            // EXERCÍCIO CÁUCULO IDADE
+
+            var anoNascimento = Number(prompt("Informe sua data de nascimento: "));
+            
+            while(anoNascimento >= 2020){   // validação
+                alert("Por favor informe sua data de nascimento corretamente...");
+                anoNascimento = Number(prompt("Informe sua data de nascimento: "));
+            }
+            
+            var anoAtual = Number(prompt("Digite o ano atual: "));
+            
+            var idade = anoAtual - anoNascimento;
+
+            alert("Sua idade é: " + idade);
+        </script>
+    </body>
+</html>
