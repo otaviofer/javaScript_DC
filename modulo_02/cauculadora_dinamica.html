@@ -1,0 +1,51 @@
+<html>
+    <meta charset="UTF-8">
+    <body>
+        <script>
+            // APLICAÇÃO CAUCULADORA DINÂMICA
+
+            /*
+            LÓGICA:
+            1 - DIGITE UM NÚMERO INICIAL
+            2 - ESCOLHA UM SINAL (TIPO DE OPERAÇÃO)
+            3 - ESCOLHA UM NUMERO FINAL
+            4 - MOSTRE O RESULTADO NA TELA
+            */
+
+            var num1 = Number(prompt("Informe o 1º número: "));
+            var sinal = prompt("Escolha uma operação: ");
+            var resultado = 0;
+
+            while(sinal != '+' && sinal != '-' && sinal != '*' && sinal != '/'){
+                alert(" Informe uma operação válida...");
+                sinal = prompt("Escolha uma operação: ");
+            }
+
+            var num2 = Number(prompt("Informe o 2º número:"));
+
+            // funcção para converter string em número
+            num1 = parseInt(num1);
+            num2 = parseInt(num2);
+
+            if(sinal == '+'){
+                resultado = num1+num2;
+                alert("Valor final: " + resultado);
+            }else if(sinal == '-'){
+                resultado = num1-num2;
+                alert("Valor final: " + resultado);
+            }else if(sinal == '*'){
+                resultado = num1*num2;
+                alert("Valor final: " + resultado);
+            }else{
+                resultado = num1/num2;
+                alert("Valor final: " + resultado);
+            }
+
+            // console.log(num1);
+            // console.log(sinal);
+            // console.log(num2);
+
+            
+        </script>
+    </body>
+</html>
