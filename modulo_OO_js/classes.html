@@ -1,0 +1,37 @@
+<html>
+  <meta charset="UTF-8" />
+  <body>
+    <script>
+      // CLASSES
+
+      class Animal {
+        // declarando uma classe
+        constructor(nome) {
+          // metodo contrutor
+          this.nome = nome;
+        }
+
+        printNome() {
+          // declarando metodos
+          return this.nome;
+        }
+      }
+
+      class Cachorro extends Animal {
+        // declare a class Cachorro e herde tudo que tem na class Animal
+        constructor(nome) {
+          super(nome);
+          this.raca = "Doberman";
+        }
+
+        printRaca() {
+          return this.raca;
+        }
+      }
+
+      cachorro = new Cachorro("Chico");
+
+      alert(cachorro.printNome());
+    </script>
+  </body>
+</html>
