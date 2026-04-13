@@ -1,0 +1,32 @@
+<html>
+  <meta charset="UTF-8" />
+  <body>
+    <script>
+      // PRATICANDO OO
+
+      function Pessoa() {
+        this.nome = "Otávio";
+        this.idade = 27;
+        this.printNome = function (numero) {
+          alert(numero);
+        };
+        this.returnAnimal = function(animal){
+          return animal;
+        }
+      }
+
+      function Animal(){
+        this.nome = "Cachorro"
+        this.raca = "Vira-lata"
+      }
+
+      var pessoa = new Pessoa();
+
+      var animal = new Animal();
+
+      alert(pessoa.returnAnimal(animal).raca);
+
+
+    </script>
+  </body>
+</html>
