@@ -77,3 +77,59 @@ meuCarro.acelerar();
 A POO ajuda a organizar o código em projetos grandes, tornando-o **reutilizável** e **fácil de manter**. É como construir seu jogo usando blocos de montar, em vez de moldar cada peça do zero toda vez.
 
 ---
+
+# 📜 Documentação Oficial: Orientação a Objetos (POO)
+
+A Programação Orientada a Objetos é a arte de criar **moldes** para gerar **entidades** vivas no código.
+
+## 🏗️ 1. A Classe (O Molde / Blueprint)
+A **Classe** é o plano de construção. Ela não ocupa espaço no "campo de batalha" (memória), ela apenas dita as regras de como algo deve ser.
+
+* **Definição:** Define quais **Atributos** (estatísticas) e **Métodos** (habilidades) a entidade terá.
+* **Regra de Ouro:** Classes geralmente começam com letra **Maiúscula** (ex: `Guerreiro`, `Carro`).
+
+
+
+## ⚡ 2. O Constructor (O Ritual de Iniciação)
+O **Constructor** é a função que dá o "sopro de vida" ao objeto.
+* Ele roda **automaticamente** uma única vez, no momento da criação.
+* Serve para receber os dados externos (como o nome do personagem) e gravá-los na ficha do objeto.
+
+## 🪞 3. O `this` (O Espelho da Identidade)
+O `this` é a palavra-chave que o objeto usa para se referir a **si mesmo**.
+* **Por que existe?** Para o JavaScript não confundir o nome do "Guerreiro A" com o nome do "Guerreiro B".
+* **Tradução:** Quando você lê `this.vida`, entenda como: *"A vida DESTE objeto aqui agora"*.
+
+---
+
+## 💎 4. O Objeto (A Entidade Real)
+O **Objeto** é o que nasce quando usamos o comando `new`.
+* **Linha de Código:** `const meuHeroi = new Personagem("Artur");`
+* **O que é "de fato"?** No código, o objeto é a variável `meuHeroi`. É ele quem guarda os valores reais na memória e quem você vai manipular durante o jogo.
+
+
+
+---
+
+## 🧬 5. Herança e o Portal `super`
+Quando uma classe "filha" herda de uma classe "pai" (`extends`), ela ganha todos os poderes do pai, mas precisa de uma conexão.
+
+* **`extends`:** Cria o vínculo de sangue (Ex: `Mago extends Humano`).
+* **`super()`:** É o comando que chama o pai. Imagine que o filho diz: *"Ei, Pai, faz a sua parte da criação primeiro!"*. É obrigatório usar o `super` antes de usar o `this` no construtor do filho.
+
+---
+
+## ❓ FAQ: Resumo de Dúvidas Sanadas
+
+| Dúvida de Recruta | Resposta do Mestre |
+| :--- | :--- |
+| **A classe já é o objeto?** | **Não.** A classe é a receita do bolo; o objeto é o bolo pronto que você pode comer. |
+| **O `this.nome` cria o nome?** | Ele **atribui** o nome àquela instância específica, garantindo que cada objeto tenha sua própria identidade. |
+| **Quem é o objeto na linha de código?** | É a variável que recebe o `new`. Ex: Em `const x = new Classe()`, o objeto de fato é o **`x`**. |
+| **Para que serve o `super`?** | Para "ligar" o construtor do filho ao construtor do pai, garantindo que a herança funcione corretamente. |
+
+---
+
+**Dica para Documentação:** Sempre que vir a palavra `new`, saiba que um novo Objeto está nascendo e ocupando um espaço único no seu computador.
+
+---
