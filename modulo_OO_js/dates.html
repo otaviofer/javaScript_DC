@@ -2,26 +2,16 @@
   <meta charset="UTF-8" />
   <body>
     <script>
-      // DATES
+      // MAIS SOBRE DATAS
+      // EXERCÍCIO: CALCULAR DIFERENÇAS DE DATAS
 
-      const date = new Date();
-      // por padrão ele mostra os detalhes da data e horários atuais
-      // alert(date);
+      const date = new Date('04/15/2026'); // padrão norte-americano 'mm/dd/aa'
 
-      // Dia do mês
-      // alert(date.getDate());
+      const date2 = new Date('04/17/2026');
 
-      // Dia da semana (começando por 0)
-      // alert(date.getDay());
+      const diferenca = (date2.getTime() - date.getTime()) / (1000 * 3600 * 24); // 1000 = 1s; 3600s = 1h; 24h => conta para transformar milissegundos em dias
+      alert(diferenca);
 
-      // Ano atual
-      // alert(date.getFullYear());
-
-      // alert(date.getHours());
-
-      alert(date.getMinutes());
-
-      // mais exemplos consultar w3Schools
     </script>
   </body>
 </html>
