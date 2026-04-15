@@ -1,13 +1,22 @@
-// ** MANIPULANDO CSS ATRAVÉS DO ID
+// ** MANIPULANDO CSS ATRAVÉS DE CLASSES
 
-const el = document.getElementById('box');  // buscando elemento pelo ID
+const elementos = document.getElementsByClassName("box");
+
+/*
+const el = elementos[0];
+
 el.style.width = 100;
 el.style.height = 100;
-el.style.backgroundColor = 'red';
+el.style.backgroundColor = 'green';
 el.style.marginLeft = 200;
+*/
 
-// CSS: margin-Left
-// JS: marginLeft
+for (let i = 0; i < elementos.length; i++) {
+  let el = elementos[i];
 
-// CSS: backgroundColor
-// JS: backgroundColor
+  el.style.width = 100;
+  el.style.height = 100;
+  el.style.backgroundColor = "green";
+  el.style.marginLeft = 200;
+  el.style.marginTop = 20;
+}
