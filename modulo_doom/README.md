@@ -40,9 +40,3 @@ Você pode criar novos elementos do zero e inseri-los na "árvore" da página:
 
 ### 🧠 Resumo de Conceito para Documentação:
 > Manipular o DOM não é alterar o arquivo `.html` físico, mas sim alterar a **representação na memória** que o navegador está exibindo. É uma manipulação "ao vivo".
-
----
-
-**Dica de Mestre:** Como você já está familiarizado, foque agora em como a **POO** (que você acabou de aprender) pode organizar suas manipulações de DOM. Já pensou em ter uma classe `Interface` que cuida de todos os `querySelector` do seu projeto?
-
-Como você quer passar rápido por este módulo, qual o próximo desafio: **quer ver como integrar classes com o DOM ou já tem um projeto em mente para validar esse conhecimento?**
