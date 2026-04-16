@@ -1,22 +1,6 @@
-// ** MANIPULANDO CSS ATRAVÉS DE CLASSES
+// ** DOMINANDO QUERYSELECTORALL
 
-const elementos = document.getElementsByClassName("box");
+const els = document.querySelectorAll('.testes .inside-testes');
+// els[1].style.color = 'red';
 
-/*
-const el = elementos[0];
-
-el.style.width = 100;
-el.style.height = 100;
-el.style.backgroundColor = 'green';
-el.style.marginLeft = 200;
-*/
-
-for (let i = 0; i < elementos.length; i++) {
-  let el = elementos[i];
-
-  el.style.width = 100;
-  el.style.height = 100;
-  el.style.backgroundColor = "green";
-  el.style.marginLeft = 200;
-  el.style.marginTop = 20;
-}
+els[0].innerHTML = '<div class="inside-testes-via-js">Olá</div>';
