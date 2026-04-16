@@ -1,13 +1,16 @@
-// ** ANIMAÇÕES COM JAVASCRIPT
+// ** ANIMAÇÕES COM JAVASCRIPT PT2
 
-const box = document.querySelectorAll(".box")[0];
+const span = document.querySelector('.conteudo span')
 
-/*
-setTimeout(()=>{
-    box.classList.add('animEsquerda');
-},1000); // executa depois de 1s
-*/
+span.addEventListener("click", function(){
+    const conteudo = document.querySelector('.conteudo p');
 
-box.addEventListener("click", () => {   // executa apos do click
-    box.classList.add("animEsquerda");
+    if(conteudo.classList.contains('mostrar')){
+        span.innerHTML = 'Ver mais...';
+        conteudo.classList.remove('mostrar');
+    }else{
+        span.innerHTML = 'Ver menos.';
+        conteudo.classList.add('mostrar');
+    }
+
 });

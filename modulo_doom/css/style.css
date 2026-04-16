@@ -1,14 +1,19 @@
-.box {
-  width: 200px;
-  height: 200px;
-  background-color: red;
-  margin-left: 0;
+/* 
+    OBJETIVO:
+    Quero que ao clicar em 'ver mais...' todo conteúdo do 'p' apareça
+*/
+
+.conteudo h2 span {
+  font-size: 13px;
+  cursor: pointer;
 }
 
-/* propriedades da animação */
-.animEsquerda { 
+.conteudo p {
+  overflow: hidden;
+  height: 15px;
   transition: 1s;
-  margin-left: 90px;
-  margin-top: 20px;
-  background-color: green;
+}
+
+.mostrar {
+  height: 200px !important;
 }
