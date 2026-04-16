@@ -1,6 +1,13 @@
-// ** DOMINANDO QUERYSELECTORALL
+// ** ANIMAÇÕES COM JAVASCRIPT
 
-const els = document.querySelectorAll('.testes .inside-testes');
-// els[1].style.color = 'red';
+const box = document.querySelectorAll(".box")[0];
 
-els[0].innerHTML = '<div class="inside-testes-via-js">Olá</div>';
+/*
+setTimeout(()=>{
+    box.classList.add('animEsquerda');
+},1000); // executa depois de 1s
+*/
+
+box.addEventListener("click", () => {   // executa apos do click
+    box.classList.add("animEsquerda");
+});
