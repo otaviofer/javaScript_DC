@@ -1,5 +1,5 @@
 <html>
-  <!-- ** ANIMAÇÕES COM JAVASCRIPT PT2 -->
+  <!-- ** CRIANDO SLIDER COM VANILLA JS -->
 
   <head>
     <meta charset="UTF-8" />
@@ -7,18 +7,20 @@
     <title>Modulo DOOM</title>
   </head>
   <body>
-    <div class="conteudo">
-      <h2>Título do conteúdo <span>Ver mais...</span></h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non
-        ullamcorper odio. Aliquam vestibulum vestibulum orci, ac placerat eros
-        luctus id. Proin et lobortis massa. Phasellus a tellus in enim finibus
-        posuere. Aliquam ullamcorper eget purus eu mollis. Aenean eget pretium
-        nibh. Proin posuere quam enim, quis malesuada est egestas a. Aenean
-        euismod commodo facilisis.
-      </p>
+    <div class="container">
+        <img style="opacity: 1;" src="./images/img-1.jpg">
+        <img src="./images/img-1.jpg">
+        <img src="./images/img-1.jpg">
+        <img src="./images/img-1.jpg">
     </div>
-
+    
+    <div class="bullets">
+        <div class="bullet-single active-bullet"></div>
+        <div class="bullet-single"></div>
+        <div class="bullet-single"></div>
+        <div class="bullet-single"></div>
+    </div>
+    
     <script src="./js/script.js"></script>
   </body>
 </html>
