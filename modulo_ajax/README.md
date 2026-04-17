@@ -95,3 +95,42 @@ request.send();
 | `send()` | Dispara a requisição para o servidor. |
 
 ---
+
+#### 1. A Chamada (`fetch`)
+```javascript
+fetch("https://jsonplaceholder.typicode.com/todos/1")
+```
+Aqui você inicia a expedição. O `fetch` vai até a URL e retorna uma **Promise**. Ele diz: *"Vou lá buscar, assim que eu tiver uma resposta do servidor (mesmo que seja só o sinal de que ele recebeu), eu te aviso"*.
+
+#### 2. A Primeira Resposta (`.then(response => ...)`)
+```javascript
+.then((response) => response.json())
+```
+Quando o servidor responde, você recebe o objeto `response`. Mas atenção: **os dados ainda não estão prontos para uso!** O corpo da resposta ainda é um "fluxo de dados brutos".
+* O método `.json()` é outra Promise. Ele diz: *"Vou ler esse fluxo e transformar o texto em um objeto JavaScript (JSON) para você"*.
+
+#### 3. O Dado Final (`.then(json => ...)`)
+```javascript
+.then((json) => console.log(json));
+```
+Só agora, depois que o JSON foi totalmente processado, você tem em mãos o objeto final pronto para ser exibido, manipulado ou injetado no seu HTML.
+
+
+
+---
+
+### ⚔️ Por que essa é a "Feature mais usada"? (Vantagens)
+
+1.  **Sintaxe "Clean":** Comparado ao `XMLHttpRequest`, o código é muito menor e fácil de ler.
+2.  **Encadeamento (Chaining):** Você pode ir passando o resultado de uma etapa para a outra usando o `.then()`.
+3.  **Global:** O `fetch` está disponível nativamente em todos os navegadores modernos sem precisar de bibliotecas externas.
+
+---
+
+### 📝 Comparação Rápida
+
+| Característica | XMLHttpRequest (Antigo) | Fetch API (Moderno) |
+| :--- | :--- | :--- |
+| **Estilo** | Baseado em eventos (`onload`) | Baseado em **Promises** (`.then`) |
+| **Complexidade** | Precisa de várias linhas de setup | Resolve em 3 linhas simples |
+| **Tratamento de Dados** | Precisa de `JSON.parse(this.response)` | Usa o método integrado `.json()` |
