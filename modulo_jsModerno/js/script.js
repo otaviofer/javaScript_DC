@@ -1,17 +1,18 @@
-/** BLOCK SCOPES 
- * 
+/** ARROW FUNCTIONS
+ *
+ *  forma moderna de declarar functions no javascript 
 */
 
+/** Forma tradicional
+ * 
+ *  function testes (){
+ * 
+ * }
+ */
 
-{
-    // vai ficar definido apenas neste  escopo.
-    var nome = 'otavio';
-
-    let testes = function(){
-        console.log('hello');
-    }
-
-    testes();
+// forma moderna de declaração
+const func = ()=>{
+    alert('Olá Mundo!');
 }
 
-console.log(nome);
+func();
