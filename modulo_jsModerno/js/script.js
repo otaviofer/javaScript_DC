@@ -1,27 +1,34 @@
-/** REST E SPREAD
+/** PROMISES, ASYNC E AWAIT
  *
- *  
-*/
+ *
+ */
 
-/*
-var nomes = [
-    {
-        nome:'Laura'
-    },
-    {
-        nome:'Josemar'
-    }
-]
-
-// spread: '...nomes,' pegue os nomes e adicione eles ao inicio
-const objetos = [...nomes,{
-    nome:'Otávio'
-}]
-*/
-
-// rest: nos permite representar um número indefinido de argumentos
-function testes(...nomes){
-    console.log(nomes);
+function testes() {
+  return new Promise(function (resolve, reject) {
+    setTimeout(function () {
+      const erro = false;
+      if (erro) {
+        reject("Erro...");
+      } else {
+        resolve("A promise foi resolvida com sucesso");
+      }
+    },2000);
+  });
 }
 
-testes(1,2,3,4,5,6,{nome:'otavio'});
+// testes()
+//   .then(function (res) {
+//     alert(res);
+//   })
+//   .catch(function (err) {
+//     alert(err);
+//   });
+
+async function testes2() {
+  await testes().then(function(res){
+    alert(res);
+  });
+  alert("Olá Mundo");
+}
+
+testes2();
