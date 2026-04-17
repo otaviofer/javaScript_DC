@@ -1,16 +1,50 @@
 <html>
-  <!-- ** REQUISIÇÃO COM FETCH ** -->
+  <!-- ** LISTA DE FILMES ** -->
 
   <head>
     <meta charset="UTF-8" />
     <title>Modulo AJAX</title>
   </head>
   <body>
+
+    <div class="container">
+
+    </div><!-- container -->
+
     <script>
-        // feature mais usada hoje para requisição ajax
-      fetch("https://jsonplaceholder.typicode.com/todos/1")
+      fetch(
+        "https://api.themoviedb.org/3/movie/popular?api_key=506fadb0256c13349acc05dabebf9604&language=en-US&page=1",
+        { method: "GET" },
+      )
         .then((response) => response.json())
-        .then((json) => console.log(json));
+        .then(function (json) {
+
+            const container = document.querySelector('.container');
+
+            // console.log(json);
+            json.results.map(function(val){
+                container.innerHTML+=`
+                
+                <div style="cursor:pointer" class="tituloFilme">`+val.title+`
+                <div style="display:none" class="description">`+val.overview+`</div>
+                <hr>
+                
+                </div>`;
+
+            })
+
+            const titulos = document.querySelectorAll('.tituloFilme');
+            for(let i=0; i<titulos.length; i++){
+                // alert(i);
+                titulos[i].addEventListener('click', function(t){
+                    if(t.target.querySelector('.description').style.display == "none"){
+                        t.target.querySelector('.description').style.display = "block";
+                    }else{
+                        t.target.querySelector('.description').style.display = "none";
+                    }
+                })
+            }
+        });
     </script>
   </body>
 </html>
