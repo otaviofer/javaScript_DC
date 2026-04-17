@@ -1,18 +1,10 @@
-/** ARROW FUNCTIONS
+/** DESTRUCTURE
  *
- *  forma moderna de declarar functions no javascript 
+ *  
 */
 
-/** Forma tradicional
- * 
- *  function testes (){
- * 
- * }
- */
+const arr = ['Otávio','João','Eluana','Jhoan','Alex'];
 
-// forma moderna de declaração
-const func = ()=>{
-    alert('Olá Mundo!');
-}
-
-func();
+// armazena cada indice em uma variavel especifica
+const [a,b,...c] = arr;     // a partir do 3º indice  coloque tudo na variavel c
+alert(c);
