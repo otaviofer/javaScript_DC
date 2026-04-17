@@ -1,10 +1,27 @@
-/** DESTRUCTURE
+/** REST E SPREAD
  *
  *  
 */
 
-const arr = ['Otávio','João','Eluana','Jhoan','Alex'];
+/*
+var nomes = [
+    {
+        nome:'Laura'
+    },
+    {
+        nome:'Josemar'
+    }
+]
 
-// armazena cada indice em uma variavel especifica
-const [a,b,...c] = arr;     // a partir do 3º indice  coloque tudo na variavel c
-alert(c);
+// spread: '...nomes,' pegue os nomes e adicione eles ao inicio
+const objetos = [...nomes,{
+    nome:'Otávio'
+}]
+*/
+
+// rest: nos permite representar um número indefinido de argumentos
+function testes(...nomes){
+    console.log(nomes);
+}
+
+testes(1,2,3,4,5,6,{nome:'otavio'});
