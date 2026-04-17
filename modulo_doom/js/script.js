@@ -25,6 +25,6 @@ images.forEach((item,index)=>{
         document.body.style.backgroundColor = colors[index];
 
         lastIndex = index;
-        
+         
     });
 });
